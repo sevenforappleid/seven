@@ -1,0 +1,28 @@
+创建仓库
+
+仓库目录下 git init
+仓库添加文件 git add 文件名
+仓库提交到仓库  git commit -m "注释信息(第一次提交)"
+
+git提示信息 git status 
+
+修改文件后，上面命令会用 红色 显示有改变的文件。
+
+git查看修改内容 git diff
+
+git log 可以查看每次提交log
+简介写法 git log --pretty=oneline  每次提交以1行显示
+
+版本恢复   git reset --hard HEAD^  回退到上一个版本
+git reset --hard HEAD~100 回退到上100个版本
+git reset --hard 版本号（commit号码，无需写全）
+git reset --hard 0b047830e443a21e3e51110a19c1fafdf87a8559 
+git reset --hard 0b047
+
+
+git reflog 该命令记录每一次操作。
+
+
+没有add，没有commit，使用 git checkout --text.txt 可恢复到和仓库一致
+若add，但没有commit，仨地方不一样  
+使用 git checkout --text.txt 回退到缓存区状态。即回到最后一次commit或者add状态
